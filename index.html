@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./icon.png">
+</head>
+<body>
+    <div class="cube">
+        <div class="top" id="top"></div>
+        <div class="before" id="before"></div>
+        <div class="after" id="after"></div>
+        <div>
+            <span class="side" style="--i:0;"></span>
+            <span class="side" style="--i:1;"></span>
+            <span class="side" style="--i:2;"></span>
+            <span class="side" style="--i:3;"></span>
+        </div>
+    </div>
+    <div class="colors">
+        <span style="--clr:#00ff00;" onclick="CColor('#00ff00', '0,255,0,')" class="cl active"></span>
+        <span class="cl" style="--clr:#ff0000;" onclick="CColor('#ff0000')"></span>
+        <span class="cl" style="--clr:#006FCD;" onclick="CColor('#006FCD')"></span>
+        <span class="cl" style="--clr:#ffff00;" onclick="CColor('#ffff00')"></span>
+        <span class="cl" style="--clr:#ff6900;" onclick="CColor('#ff6900')"></span>
+        <span class="cl" style="--clr:#ffffff;" onclick="CColor('#ffffff')"></span>
+        <span class="cl" style="--clr:#6441a5;" onclick="CColor('#6441a5')"></span>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
