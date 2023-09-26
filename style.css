@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
     transition: 0.5s;
 }
 body{
@@ -106,4 +108,56 @@ body{
     filter: drop-shadow(2px 2px 4px #888);
     scale: 1.5;
     transition: 0.5s;
+}
+.clock{
+    position: absolute;
+    top: 69px;
+    display: flex;
+    gap: 10px;
+    font-family: 'Anton', sans-serif;
+}
+.clock .digital{
+    position: relative;
+    width: 60px;
+    height: 120px;/*
+    box-shadow: 20px 20px 20px -10px rgba(0,0,0,0.15),
+    inset 15px 15px 10px rgba(255,255,255,0.5),
+    -15px -15px 35px rgba(255,255,255,0.35),
+    inset -1px -1px 10px rgba(0,0,0,0.2);*/
+}
+.clock .digital .screen{
+    position: absolute;
+    inset: 20px;/*
+    box-shadow: 5px 5px 15px 0 #152b4a66,
+    inset 5px 5px 5px rgba(200,200,200,0.35),
+    5px 5px 15px rgba(255,255,255,1);*/
+}
+.clock .digital .screen::before{
+    content: attr(data-text);
+    position: absolute;
+    bottom: -2.5px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.75);
+    letter-spacing: 0.05em;
+    color: #aaa;
+    text-transform: uppercase;
+    
+}
+.clock .digital .time{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock .digital .time div{
+    position: relative;
+    font-size: 2.9em;
+    color: var(--clr);
+    letter-spacing: 0.1em;
+    margin-left: 0.1em;
+}
+.clock .digital:nth-last-child(1) .time div{
+    color: transparent;
+    -webkit-text-stroke: 2px var(--clr);
 }
